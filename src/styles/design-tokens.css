@@ -1,0 +1,93 @@
+:root {
+  /* Colors - Indigo/Slate Palette */
+  --primary-50: #eef2ff;
+  --primary-100: #e0e7ff;
+  --primary-200: #c7d2fe;
+  --primary-300: #a5b4fc;
+  --primary-400: #818cf8;
+  --primary-500: #6366f1;
+  --primary-600: #4f46e5;
+  --primary-700: #4338ca;
+  --primary-800: #3730a3;
+  --primary-900: #312e81;
+  --primary-950: #1e1b4b;
+
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+
+  --emerald-500: #10b981;
+  --amber-500: #f59e0b;
+  --rose-500: #f43f5e;
+
+  /* Functional Colors */
+  --bg-main: var(--slate-950);
+  --bg-card: rgba(30, 41, 59, 0.7);
+  --bg-surface: var(--slate-900);
+  --text-primary: var(--slate-50);
+  --text-secondary: var(--slate-400);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.15);
+
+  /* Typography Scale — Inter */
+  --font-sans: 'Inter', sans-serif;
+
+  /* Display */
+  --type-display-size:    67px;
+  --type-display-lh:      72px;
+  --type-display-ls:      -0.03em;
+  --type-display-weight:  800;
+
+  /* Heading */
+  --type-heading-size:    38px;
+  --type-heading-lh:      46px;
+  --type-heading-ls:      -0.02em;
+  --type-heading-weight:  700;
+
+  /* Body */
+  --type-body-size:    16px;
+  --type-body-lh:      26px;
+  --type-body-ls:      0em;
+  --type-body-weight:  400;
+
+  /* Caption */
+  --type-caption-size:    12px;
+  --type-caption-lh:      18px;
+  --type-caption-ls:      0.01em;
+  --type-caption-weight:  400;
+
+  /* Button */
+  --type-button-size:    16px;
+  --type-button-lh:      20px;
+  --type-button-ls:      0.04em;
+  --type-button-weight:  600;
+
+  /* Spacing */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+
+  /* Blur Effects */
+  --glass-blur: blur(12px);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+[data-theme="light"] {
+  --bg-main: var(--slate-50);
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --bg-surface: #ffffff;
+  --text-primary: var(--slate-900);
+  --text-secondary: var(--slate-500);
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.15);
+}

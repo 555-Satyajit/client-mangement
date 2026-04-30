@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useApp } from "@/context/AppContext"
 import { useNavigate } from "react-router-dom"
-import { LogIn } from "lucide-react"
 
 export function LoginForm({
   className,
@@ -30,8 +29,8 @@ export function LoginForm({
           <form className="p-6 md:p-12" onSubmit={handleSubmit}>
             <div className="flex flex-col gap-8">
               <div className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-primary/20">
-                  <LogIn className="text-white" size={24} />
+                <div className="mb-4">
+                  <img src="/logo_client.png" alt="Logo" className="h-20 w-auto object-contain" />
                 </div>
                 <h1 className="text-2xl font-bold tracking-tight text-white">Client Portal</h1>
                 <p className="text-sm text-slate-400 mt-1">
@@ -42,11 +41,11 @@ export function LoginForm({
               <div className="grid gap-5">
                 <div className="grid gap-2">
                   <Label htmlFor="email" className="text-slate-300">Email Address</Label>
-                  <Input 
-                    id="email" 
-                    type="email" 
-                    placeholder="name@company.com" 
-                    required 
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="name@company.com"
+                    required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="bg-white/5 border-white/10 text-white placeholder:text-slate-600 h-11 focus:border-primary/50"
@@ -59,10 +58,10 @@ export function LoginForm({
                       Forgot password?
                     </a>
                   </div>
-                  <Input 
-                    id="password" 
-                    type="password" 
-                    required 
+                  <Input
+                    id="password"
+                    type="password"
+                    required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="bg-white/5 border-white/10 text-white h-11 focus:border-primary/50"
@@ -79,20 +78,20 @@ export function LoginForm({
             </div>
           </form>
           <div className="relative hidden md:block overflow-hidden border-l border-white/5">
-             <img 
-               src="/login-bg.png" 
-               alt="Agency Hub" 
-               className="absolute inset-0 h-full w-full object-cover brightness-75 contrast-125" 
-             />
-             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent z-10" />
-             <div className="absolute inset-0 flex items-center justify-center p-12 text-center z-20">
-                <div>
-                   <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">Agency Hub</h3>
-                   <p className="text-slate-200 text-sm leading-relaxed font-medium">
-                     Experience high-velocity collaboration.
-                   </p>
-                </div>
-             </div>
+            <img
+              src="/login-bg.png"
+              alt="Agency Hub"
+              className="absolute inset-0 h-full w-full object-cover brightness-75 contrast-125"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent z-10" />
+            <div className="absolute inset-0 flex items-center justify-center p-12 text-center z-20">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">Agency Hub</h3>
+                <p className="text-slate-200 text-sm leading-relaxed font-medium">
+                  Experience high-velocity collaboration.
+                </p>
+              </div>
+            </div>
           </div>
         </CardContent>
       </Card>

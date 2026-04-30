@@ -4,6 +4,16 @@ export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+			},
+			fontSize: {
+				'display': ['67px', { lineHeight: '72px', letterSpacing: '-0.03em', fontWeight: '800' }],
+				'heading': ['38px', { lineHeight: '46px', letterSpacing: '-0.02em', fontWeight: '700' }],
+				'body': ['16px', { lineHeight: '26px', letterSpacing: '0', fontWeight: '400' }],
+				'caption': ['12px', { lineHeight: '18px', letterSpacing: '0.01em', fontWeight: '400' }],
+				'button': ['16px', { lineHeight: '20px', letterSpacing: '0.04em', fontWeight: '600' }],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -75,5 +85,5 @@ export default {
 			}
 		}
 	},
-	plugins: [import("tailwindcss-animate")],
+	plugins: [],
 }

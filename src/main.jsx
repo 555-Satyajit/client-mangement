@@ -4,13 +4,16 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
 import { AppProvider } from './context/AppContext'
+import { MuiThemeWrapper } from './theme/MuiThemeWrapper'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AppProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <MuiThemeWrapper>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </MuiThemeWrapper>
     </AppProvider>
   </React.StrictMode>,
 )

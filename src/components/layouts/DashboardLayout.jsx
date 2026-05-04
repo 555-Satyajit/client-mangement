@@ -12,7 +12,7 @@ const MobileHeader = ({ onOpenDrawer }) => (
     justifyContent: 'space-between', 
     px: 2, 
     borderBottom: '1px solid #e2e8f0',
-    bgcolor: '#fcfcfc',
+    bgcolor: 'hsla(228, 33%, 97%, 1)',
     position: 'sticky',
     top: 0,
     zIndex: 1100
@@ -55,7 +55,7 @@ const DashboardLayout = ({ children }) => {
   };
 
   return (
-    <Box sx={{ display: 'flex', minHeight: '100vh', bgcolor: '#fcfcfc', flexDirection: 'column' }}>
+    <Box sx={{ display: 'flex', minHeight: '100vh', bgcolor: { xs: 'hsla(228, 33%, 97%, 1)', md: '#fcfcfc' }, flexDirection: 'column' }}>
       <MobileHeader onOpenDrawer={() => setDrawerOpen(true)} />
       
       <Box sx={{ display: 'flex', flex: 1 }}>

@@ -74,6 +74,8 @@ const Navbar = () => {
               borderRadius: '8px',
               bgcolor: '#fcfcfc',
               height: 36,
+              color: '#0f172a',
+              fontSize: '0.875rem',
               '& fieldset': { borderColor: '#e2e8f0' },
               '&:hover fieldset': { borderColor: '#cbd5e1' },
               '&.Mui-focused': {
@@ -83,6 +85,10 @@ const Navbar = () => {
                   borderWidth: '1px'
                 }
               },
+            },
+            '& .MuiInputBase-input::placeholder': {
+              color: '#64748b',
+              opacity: 1
             }
           }}
           slotProps={{
@@ -115,7 +121,8 @@ const Navbar = () => {
                 readOnly: true,
                 sx: { 
                   cursor: 'pointer !important',
-                  fontSize: '9px !important'
+                  color: '#0f172a !important',
+                  fontSize: '0.875rem'
                 } 
               },
               sx: {
@@ -125,6 +132,7 @@ const Navbar = () => {
                   bgcolor: '#fcfcfc',
                   height: 36,
                   cursor: 'pointer !important',
+                  color: '#0f172a',
                   '& fieldset': { borderColor: '#e2e8f0' },
                   '&:hover fieldset': { borderColor: '#cbd5e1' },
                   '&.Mui-focused': {
@@ -136,25 +144,24 @@ const Navbar = () => {
                 },
                 '& .MuiInputBase-input': {
                   fontWeight: 600,
-                  color: '#0f172a',
+                  color: '#0f172a !important',
                   cursor: 'pointer !important',
                   paddingLeft: 0,
                   userSelect: 'none',
                   caretColor: 'transparent',
-                  fontSize: '0.875rem'
+                  fontSize: '0.875rem',
+                  '&::placeholder': {
+                    color: '#0f172a',
+                    opacity: 1
+                  }
                 }
               },
-              slotProps: {
-                input: {
-                  sx: { fontSize: '14px !important' },
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <SvgIcon sx={{ color: '#0f172a', fontSize: 20 }}>
-                        <path d="M20 3h-1V2c0-.55-.45-1-1-1s-1 .45-1 1v1H7V2c0-.55-.45-1-1-1s-1 .45-1 1v1H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-1 18H5c-.55 0-1-.45-1-1V8h16v12c0 .55-.45-1-1-1" />
-                      </SvgIcon>
-                    </InputAdornment>
-                  )
-                }
+              InputProps: {
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <CalendarIcon />
+                  </InputAdornment>
+                )
               }
             }
           }}

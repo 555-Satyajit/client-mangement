@@ -47,10 +47,12 @@ const Navbar = () => {
       px: 3,
       bgcolor: 'transparent',
       mb: 1,
-      '& input': {
+      // Broad fail-safe for all inputs and modern MUI X Field segments
+      '& input, & .MuiInputBase-input, & [class*="MuiInputBase-input"], & .MuiPickersSectionText-root, & [class*="MuiPickersSection"]': {
         color: '#0f172a !important',
         WebkitTextFillColor: '#0f172a !important',
-        opacity: '1 !important'
+        opacity: '1 !important',
+        visibility: 'visible !important'
       }
     }}>
       {/* Breadcrumbs */}
@@ -102,51 +104,67 @@ const Navbar = () => {
           }}
         />
 
-        <DatePicker
-          defaultValue={dayjs('2023-04-17')}
-          format="MMM DD, YYYY"
-          open={open}
-          onOpen={() => setOpen(true)}
-          onClose={() => setOpen(false)}
-          slots={{
-            openPickerButton: () => null
-          }}
-          slotProps={{
-            textField: {
-              size: 'small',
-              onClick: () => setOpen(true),
-              sx: {
-                width: 175,
-                '& .MuiOutlinedInput-root': {
-                  borderRadius: '10px',
-                  bgcolor: '#ffffff',
-                  height: 38,
-                  cursor: 'pointer !important',
-                  '& fieldset': { borderColor: '#cbd5e1' },
-                  '&:hover fieldset': { borderColor: '#94a3b8' },
-                  '&.Mui-focused': {
-                    outline: '2px solid hsla(210, 98%, 42%, 0.3)',
-                    '& fieldset': { borderColor: '#2563eb !important' }
+        <Box sx={{
+          width: 175,
+          height: 38,
+          bgcolor: '#ffffff',
+          border: '1px solid #cbd5e1',
+          borderRadius: '10px',
+          display: 'flex',
+          alignItems: 'center',
+          cursor: 'pointer',
+          '&:hover': { borderColor: '#94a3b8' },
+          '&:focus-within': { 
+            outline: '2px solid hsla(210, 98%, 42%, 0.3)',
+            borderColor: '#2563eb'
+          }
+        }}>
+          <DatePicker
+            defaultValue={dayjs('2023-04-17')}
+            format="MMM DD, YYYY"
+            open={open}
+            onOpen={() => setOpen(true)}
+            onClose={() => setOpen(false)}
+            slots={{
+              openPickerButton: () => null
+            }}
+            slotProps={{
+              textField: {
+                size: 'small',
+                fullWidth: true,
+                onClick: () => setOpen(true),
+                sx: {
+                  '& .MuiOutlinedInput-root': {
+                    bgcolor: 'transparent !important',
+                    '& fieldset': { border: 'none !important' },
+                    '&:hover fieldset': { border: 'none !important' },
+                    '&.Mui-focused fieldset': { border: 'none !important' },
+                    height: 38,
+                  },
+                  '& .MuiInputBase-input': {
+                    fontWeight: 600,
+                    fontSize: '0.875rem',
+                    padding: '0 8px 0 8px !important'
+                  },
+                  // Ensure text segments are dark
+                  '& .MuiPickersSectionText-root': {
+                    color: '#0f172a !important',
+                    WebkitTextFillColor: '#0f172a !important',
                   }
                 },
-                '& .MuiInputBase-input': {
-                  fontWeight: 600,
-                  fontSize: '0.875rem'
-                }
-              },
-              slotProps: {
-                input: {
-                  readOnly: true,
-                  startAdornment: (
-                    <InputAdornment position="start" sx={{ pl: 1 }}>
-                      <Calendar size={18} color="#0f172a" />
-                    </InputAdornment>
-                  )
+                slotProps: {
+                  input: {
+                    startAdornment: (
+                      <InputAdornment position="start" sx={{ ml: 1, mr: 1 }}>
+                        <Calendar size={18} color="#0f172a" />
+                      </InputAdornment>
+                    )
+                  }
                 }
               }
-            }
-          }}
-        />
+            }}
+          />
+        </Box>
 
         <Badge
           variant="dot"

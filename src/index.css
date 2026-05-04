@@ -14,8 +14,12 @@
   }
 }
 
-/* Global fail-safe for all inputs to ensure visibility in Chrome/Vercel */
-input {
+/* Global fail-safe for all inputs and modern MUI Field segments to ensure visibility in Chrome/Vercel */
+input, 
+.MuiInputBase-input, 
+[class*="MuiInputBase-input"],
+.MuiPickersSectionText-root,
+[class*="MuiPickersSection"] {
   color: #0f172a !important;
   -webkit-text-fill-color: #0f172a !important;
   opacity: 1 !important;

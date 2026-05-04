@@ -355,7 +355,7 @@ const Sidebar = ({ onLinkClick, isMobile }) => {
         <Box sx={{ color: '#1e293b', mb: 1 }}>
           <AutoAwesome sx={{ fontSize: 20 }} />
         </Box>
-        <Typography variant="body1" sx={{ fontWeight: 700, mb: 0.5, fontSize: '14px', fontFamily: 'Inter, sans-serif' }}>
+        <Typography variant="body1" sx={{ fontWeight: 700, mb: 0.5, fontSize: '14px', color: '#1e293b', fontFamily: 'Inter, sans-serif' }}>
           Plan about to expire
         </Typography>
         <Typography variant="body2" sx={{ color: '#475569', display: 'block', mb: 2, fontSize: '14px', fontFamily: 'Inter, sans-serif' }}>

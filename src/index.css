@@ -14,4 +14,9 @@
   }
 }
 
-/* We'll handle typography and components via MUI Theme from now on */
+/* Global fail-safe for all inputs to ensure visibility in Chrome/Vercel */
+input {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  opacity: 1 !important;
+}

@@ -46,7 +46,12 @@ const Navbar = () => {
       justifyContent: 'space-between',
       px: 3,
       bgcolor: 'transparent',
-      mb: 1
+      mb: 1,
+      '& input': {
+        color: '#0f172a !important',
+        WebkitTextFillColor: '#0f172a !important',
+        opacity: '1 !important'
+      }
     }}>
       {/* Breadcrumbs */}
       <Breadcrumbs
@@ -72,18 +77,13 @@ const Navbar = () => {
             width: 200,
             '& .MuiOutlinedInput-root': {
               borderRadius: '8px',
-              bgcolor: '#fcfcfc',
-              height: 36,
-              color: '#0f172a',
-              fontSize: '0.875rem',
-              '& fieldset': { borderColor: '#e2e8f0' },
-              '&:hover fieldset': { borderColor: '#cbd5e1' },
+              bgcolor: '#ffffff',
+              height: 38,
+              '& fieldset': { borderColor: '#cbd5e1' },
+              '&:hover fieldset': { borderColor: '#94a3b8' },
               '&.Mui-focused': {
-                outline: '3px solid hsla(210, 98%, 42%, 0.5)',
-                '& fieldset': {
-                  borderColor: 'hsl(210, 98%, 48%) !important',
-                  borderWidth: '1px'
-                }
+                outline: '2px solid hsla(210, 98%, 42%, 0.3)',
+                '& fieldset': { borderColor: '#2563eb !important' }
               },
             },
             '& .MuiInputBase-input::placeholder': {
@@ -95,9 +95,7 @@ const Navbar = () => {
             input: {
               startAdornment: (
                 <InputAdornment position="start">
-                  <SvgIcon fontSize="small" sx={{ color: '#64748b' }}>
-                    <path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14" />
-                  </SvgIcon>
+                  <CustomSearchIcon />
                 </InputAdornment>
               ),
             }
@@ -118,25 +116,21 @@ const Navbar = () => {
               size: 'small',
               onClick: () => setOpen(true),
               sx: {
-                width: 170,
+                width: 175,
                 '& .MuiOutlinedInput-root': {
                   borderRadius: '10px',
-                  bgcolor: '#fcfcfc',
-                  height: 36,
+                  bgcolor: '#ffffff',
+                  height: 38,
                   cursor: 'pointer !important',
-                  '& fieldset': { borderColor: '#e2e8f0' },
-                  '&:hover fieldset': { borderColor: '#cbd5e1' },
+                  '& fieldset': { borderColor: '#cbd5e1' },
+                  '&:hover fieldset': { borderColor: '#94a3b8' },
                   '&.Mui-focused': {
-                    outline: '3px solid hsla(210, 98%, 42%, 0.5)',
-                    '& fieldset': { borderColor: 'hsl(210, 98%, 48%) !important' }
+                    outline: '2px solid hsla(210, 98%, 42%, 0.3)',
+                    '& fieldset': { borderColor: '#2563eb !important' }
                   }
                 },
                 '& .MuiInputBase-input': {
                   fontWeight: 600,
-                  color: '#0f172a !important',
-                  WebkitTextFillColor: '#0f172a !important',
-                  cursor: 'pointer !important',
-                  userSelect: 'none',
                   fontSize: '0.875rem'
                 }
               },
@@ -144,17 +138,10 @@ const Navbar = () => {
                 input: {
                   readOnly: true,
                   startAdornment: (
-                    <InputAdornment position="start">
-                      <CalendarIcon />
+                    <InputAdornment position="start" sx={{ pl: 1 }}>
+                      <Calendar size={18} color="#0f172a" />
                     </InputAdornment>
-                  ),
-                  sx: {
-                    cursor: 'pointer !important',
-                    '& .MuiInputBase-input': {
-                      color: '#0f172a !important',
-                      WebkitTextFillColor: '#0f172a !important'
-                    }
-                  }
+                  )
                 }
               }
             }

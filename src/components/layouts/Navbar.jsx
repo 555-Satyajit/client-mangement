@@ -117,51 +117,45 @@ const Navbar = () => {
             textField: {
               size: 'small',
               onClick: () => setOpen(true),
-              inputProps: { 
-                readOnly: true,
-                sx: { 
-                  cursor: 'pointer !important',
-                  color: '#0f172a !important',
-                  fontSize: '0.875rem'
-                } 
-              },
               sx: {
-                width: 150,
+                width: 170,
                 '& .MuiOutlinedInput-root': {
                   borderRadius: '10px',
                   bgcolor: '#fcfcfc',
                   height: 36,
                   cursor: 'pointer !important',
-                  color: '#0f172a',
                   '& fieldset': { borderColor: '#e2e8f0' },
                   '&:hover fieldset': { borderColor: '#cbd5e1' },
                   '&.Mui-focused': {
                     outline: '3px solid hsla(210, 98%, 42%, 0.5)',
-                    '& fieldset': { 
-                      borderColor: 'hsl(210, 98%, 48%) !important',
-                    }
+                    '& fieldset': { borderColor: 'hsl(210, 98%, 48%) !important' }
                   }
                 },
                 '& .MuiInputBase-input': {
                   fontWeight: 600,
                   color: '#0f172a !important',
+                  WebkitTextFillColor: '#0f172a !important',
                   cursor: 'pointer !important',
-                  paddingLeft: 0,
                   userSelect: 'none',
-                  caretColor: 'transparent',
-                  fontSize: '0.875rem',
-                  '&::placeholder': {
-                    color: '#0f172a',
-                    opacity: 1
-                  }
+                  fontSize: '0.875rem'
                 }
               },
-              InputProps: {
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <CalendarIcon />
-                  </InputAdornment>
-                )
+              slotProps: {
+                input: {
+                  readOnly: true,
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <CalendarIcon />
+                    </InputAdornment>
+                  ),
+                  sx: {
+                    cursor: 'pointer !important',
+                    '& .MuiInputBase-input': {
+                      color: '#0f172a !important',
+                      WebkitTextFillColor: '#0f172a !important'
+                    }
+                  }
+                }
               }
             }
           }}

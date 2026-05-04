@@ -1,6 +1,9 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useApp } from './context/AppContext';
 
+// Layouts
+import DashboardLayout from './components/layouts/DashboardLayout';
+
 // Pages
 import LoginPage from './pages/Login';
 import ClientDashboard from './pages/client/Dashboard';
@@ -17,10 +20,12 @@ function App() {
       <Route 
         path="/client/*" 
         element={user?.role === 'client' ? (
-          <Routes>
-            <Route path="dashboard" element={<ClientDashboard />} />
-            <Route path="*" element={<Navigate to="dashboard" />} />
-          </Routes>
+          <DashboardLayout>
+            <Routes>
+              <Route path="dashboard" element={<ClientDashboard />} />
+              <Route path="*" element={<Navigate to="dashboard" />} />
+            </Routes>
+          </DashboardLayout>
         ) : <Navigate to="/login" />} 
       />
 
@@ -28,10 +33,12 @@ function App() {
       <Route 
         path="/admin/*" 
         element={user?.role === 'admin' ? (
-          <Routes>
-            <Route path="dashboard" element={<AdminDashboard />} />
-            <Route path="*" element={<Navigate to="dashboard" />} />
-          </Routes>
+          <DashboardLayout>
+            <Routes>
+              <Route path="dashboard" element={<AdminDashboard />} />
+              <Route path="*" element={<Navigate to="dashboard" />} />
+            </Routes>
+          </DashboardLayout>
         ) : <Navigate to="/login" />} 
       />
 

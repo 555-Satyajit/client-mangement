@@ -24,3 +24,10 @@ input,
   -webkit-text-fill-color: #0f172a !important;
   opacity: 1 !important;
 }
+
+/* Fail-safe for standard typography and menu items in production */
+.MuiTypography-root,
+.MuiMenuItem-root,
+.MuiListItemText-primary {
+  opacity: 1 !important;
+}

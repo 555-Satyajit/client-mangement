@@ -180,7 +180,7 @@ const Sidebar = ({ onLinkClick, isMobile }) => {
         </Box>
       </MenuItem>
 
-      <Divider sx={{ my: 1 }} />
+      <Divider sx={{ my: 1, borderColor: '#f1f5f9' }} />
       <MenuItem sx={{ py: 1, gap: 1.5 }}>
         <Avatar sx={{ width: 28, height: 28, bgcolor: 'transparent', color: '#64748b', border: '1px dashed #e2e8f0' }}>
           <Add sx={{ fontSize: 16 }} />
@@ -424,12 +424,12 @@ const Sidebar = ({ onLinkClick, isMobile }) => {
               },
             }}
           >
-            <MenuItem sx={{ py: 1, fontSize: '14px', fontWeight: 500, fontFamily: 'Inter, sans-serif' }}>Profile</MenuItem>
-            <MenuItem sx={{ py: 1, fontSize: '14px', fontWeight: 500, fontFamily: 'Inter, sans-serif' }}>My account</MenuItem>
-            <Divider sx={{ my: 0.5 }} />
-            <MenuItem sx={{ py: 1, fontSize: '14px', fontWeight: 500, fontFamily: 'Inter, sans-serif' }}>Add another account</MenuItem>
-            <MenuItem sx={{ py: 1, fontSize: '14px', fontWeight: 500, fontFamily: 'Inter, sans-serif' }}>Settings</MenuItem>
-            <Divider sx={{ my: 0.5 }} />
+            <MenuItem sx={{ py: 1, fontSize: '14px', fontWeight: 500, fontFamily: 'Inter, sans-serif', color: '#1e293b' }}>Profile</MenuItem>
+            <MenuItem sx={{ py: 1, fontSize: '14px', fontWeight: 500, fontFamily: 'Inter, sans-serif', color: '#1e293b' }}>My account</MenuItem>
+            <Divider sx={{ my: 0.5, borderColor: '#f1f5f9' }} />
+            <MenuItem sx={{ py: 1, fontSize: '14px', fontWeight: 500, fontFamily: 'Inter, sans-serif', color: '#1e293b' }}>Add another account</MenuItem>
+            <MenuItem sx={{ py: 1, fontSize: '14px', fontWeight: 500, fontFamily: 'Inter, sans-serif', color: '#1e293b' }}>Settings</MenuItem>
+            <Divider sx={{ my: 0.5, borderColor: '#f1f5f9' }} />
             <MenuItem sx={{ 
               py: 1, 
               fontSize: '14px', 
@@ -437,7 +437,8 @@ const Sidebar = ({ onLinkClick, isMobile }) => {
               fontFamily: 'Inter, sans-serif',
               display: 'flex', 
               justifyContent: 'space-between', 
-              alignItems: 'center' 
+              alignItems: 'center',
+              color: '#1e293b'
             }}>
               Logout
               <Logout sx={{ fontSize: 18, color: '#64748b' }} />

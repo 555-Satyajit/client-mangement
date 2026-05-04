@@ -165,9 +165,20 @@ export default function LoginPage() {
                     />
                   </FormControl>
                   <FormControlLabel
-                    control={<Checkbox value="remember" sx={{ color: '#cbd5e1', '&.Mui-checked': { color: '#3b82f6' } }} />}
+                    control={
+                      <Checkbox 
+                        size="small"
+                        value="remember" 
+                        sx={{ 
+                          color: '#cbd5e1', 
+                          '&.Mui-checked': { color: '#3b82f6' },
+                          '& .MuiSvgIcon-root': { fontSize: 20 },
+                          p: 1
+                        }} 
+                      />
+                    }
                     label={<Typography variant="body2" sx={{ fontWeight: 500, color: '#64748b' }}>Remember me</Typography>}
-                    sx={{ mt: -0.5 }}
+                    sx={{ mt: -0.5, ml: -0.5 }}
                   />
                   <Button
                     type="submit"

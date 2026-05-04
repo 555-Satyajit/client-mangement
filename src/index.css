@@ -15,7 +15,8 @@
 }
 
 /* Global fail-safe for all inputs and modern MUI Field segments to ensure visibility in Chrome/Vercel */
-input, 
+/* Global fail-safe for all inputs and modern MUI Field segments to ensure visibility in Chrome/Vercel */
+input:not([type="checkbox"]):not([type="radio"]), 
 .MuiInputBase-input, 
 [class*="MuiInputBase-input"],
 .MuiPickersSectionText-root,
